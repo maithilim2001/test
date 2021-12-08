@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>
+Login page
+</title>
+</head>
+<body>
+<h1 align="center">Login Page</h1>
+<form name="login" align='center'>
+Username<input type="text" name="userid"/><br><br>
+Password<input type="password" name="pswrd"/><br><br>
+<input type="button" onclick="check(this.form)" value="Login" required>
+<input type="reset" value="Cancel" required>
+</form>
+<script language="javascript">
+function check(form)
+{
+ 
+ if(form.userid.value === "myuserid" && form.pswrd.value === "mypswrd" )
+  {
+    alert("Login successful")
+  }
+  else if(form.userid.value.trim() === ""){
+      alert("username is empty");
+  }else if(form.pswrd.value.trim() === ""){
+      alert("password is empty");
+  }
+ else
+ {
+   alert("Incorrect Password or Username")
+  }
+
+}
+</script>
+</body>
+</html>
